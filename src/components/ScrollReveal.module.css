@@ -1,0 +1,25 @@
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.direction-up {
+  transform: translateY(40px);
+}
+
+.direction-left {
+  transform: translateX(-40px);
+}
+
+.direction-right {
+  transform: translateX(40px);
+}
+
+.direction-none {
+  transform: none;
+}
+
+.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}

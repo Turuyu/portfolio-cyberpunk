@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a2e;
+  --cyan: #00f0ff;
+  --pink: #ff006e;
+  --purple: #8b5cf6;
+  --text-primary: #e0e0e0;
+  --text-secondary: #8888aa;
+  --font-mono: 'Courier New', 'Fira Code', monospace;
+  --font-heading: 'Segoe UI', system-ui, sans-serif;
+  --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.2);
+  --glow-pink: 0 0 20px rgba(255, 0, 110, 0.5), 0 0 40px rgba(255, 0, 110, 0.2);
+}
+
+body {
+  font-family: var(--font-heading);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.app {
+  position: relative;
+}
+
+.app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 240, 255, 0.03) 2px,
+      rgba(0, 240, 255, 0.03) 4px
+    );
+  pointer-events: none;
+  z-index: 9999;
+}
