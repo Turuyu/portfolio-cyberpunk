@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# ◆ NEXUS Systems — Cyberpunk Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page futurista para una empresa de ciberseguridad ficticia, diseñada como proyecto de portfolio para demostrar habilidades avanzadas de frontend y animaciones.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Ver demo en vivo](#) _(próximamente)_
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Typing effect** — Texto que se escribe solo en el hero
+- **Partículas interactivas** — Canvas con red neural que reacciona al mouse
+- **Scroll progress bar** — Barra de progreso con gradiente neón
+- **Contadores animados** — Números que cuentan desde 0 al entrar en viewport
+- **Efecto glitch** — Animación glitch en hover sobre las cards
+- **Scroll reveal** — Animaciones de entrada por sección
+- **Navbar con glow** — Navegación fija con efecto luminoso al scrollear
+- **Scanlines CRT** — Overlay de líneas tipo monitor retro
+- **Diseño 100% responsive** — Mobile-first con menú hamburguesa
 
-## Expanding the ESLint configuration
+## 🛠️ Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Vite** — Build tool y dev server
+- **React 18** — UI library
+- **TypeScript** — Type safety
+- **CSS Modules** — Scoped styling
+- **Canvas API** — Partículas animadas sin dependencias
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Instalación
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/Turuyu/portfolio-cyberpunk.git
+cd portfolio-cyberpunk
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+El servidor corre en `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏗️ Estructura
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── Navbar.tsx           # Navegación sticky con glow
+│   ├── Hero.tsx             # Hero con typing effect + partículas
+│   ├── Particles.tsx        # Canvas de partículas interactivas
+│   ├── TypingEffect.tsx     # Hook de efecto de escritura
+│   ├── ScrollProgress.tsx   # Barra de progreso de scroll
+│   ├── ScrollReveal.tsx     # Animaciones de entrada
+│   ├── Services.tsx         # Cards con glitch hover
+│   ├── Features.tsx         # Stats con contadores animados
+│   ├── Pricing.tsx          # Tabla de planes
+│   ├── Contact.tsx          # Formulario estilo terminal
+│   └── Footer.tsx           # Footer
+├── App.tsx
+├── App.css                  # Variables CSS + scanlines
+└── index.css                # Reset y base
+```
+
+## 🎨 Paleta
+
+| Color | Hex | Uso |
+|-------|-----|-----|
+| Negro profundo | `#0a0a0f` | Fondo principal |
+| Cyan neón | `#00f0ff` | Acento primario |
+| Rosa neón | `#ff006e` | Acento secundario |
+| Púrpura | `#8b5cf6` | Acento terciario |
+
+## 📸 Screenshots
+
+_(Agregar screenshots del proyecto)_
+
+## 📝 License
+
+MIT
